@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Kira's Site</title>
+    <!--Load script start-->
+    <script src="js/framework.js" type="text/javascript"></script>
+    <link href="css/framework.css" rel="stylesheet" type="text/css">
+    <script src="js/login.js" type="text/javascript"></script>
+    <link href="css/login.css" rel="stylesheet" type="text/css">
+    <link href="framework/fontawesome/css/fontawesome.css" rel="stylesheet" type="text/css"> <!--只是为了加载Icon，应该可以用吧-->
+    <link href="framework/fontawesome/css/solid.css" rel="stylesheet" type="text/css"> <!--只是为了加载Icon，应该可以用吧-->
+    <link href="framework/fontawesome/css/brands.css" rel="stylesheet" type="text/css"> <!--只是为了加载Icon，应该可以用吧-->
+    <!--Load script stop-->
+</head>
+<body>
+<!--header start-->
+
+<!--header stop-->
+
+<section>
+    <div class="doc-block">
+        <div class="login-sitetitle">
+            <p>Welcome to Kira's Site</p>
+        </div>
+        <form action="kiralogin.php" id="logwin" method="post" name="logwin">
+            <div class="login-logwin">
+
+                <div class="login-logwin-input">
+                    <label for="identity">
+                        用户名或电子邮箱地址
+                    </label>
+                    <input id="identity" type="text" name="identity" value="Guessヾ(≧▽≦*)o 先随便设">
+                </div>
+                <div class="login-logwin-input">
+                    <label for="password">
+                        密码
+                    </label>
+                    <input id="password" type="password" name="password" value="Guessヾ(≧▽≦*)o 先随便设">
+                    <i class="login-logwin-input-pwvis fa fa-eye-slash" onclick="passwordVisability()"></i>
+                </div>
+                <div class="login-logwin-chkbox">
+                    <input checked id="remember" type="checkbox" name="remember">
+                    <label for="remember">
+                        记住我
+                    </label>
+                    <input id="login" type="submit">
+                </div>
+            </div>
+            <div class="login-advanced">
+                <div class="login-advanced-forget">
+                    <a href="404.html">忘记密码?</a>
+                    <a href="#" onclick="window.history.back()">← 返回到 Kira's Site</a>
+                    <div>
+                        <i class="fa fa-language"></i>
+                        <select name="language" id="lang">
+                            <option value="en-US" >English (US)</option>
+                            <option value="zh-CN" selected>简体中文</option>
+                        </select>
+                        <label for="sellan">提交</label>
+                        <input type="button" id="sellan">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+</body>
+</html>

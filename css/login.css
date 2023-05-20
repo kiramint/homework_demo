@@ -1,0 +1,127 @@
+:root {
+    --minwidth: 500px;
+}
+
+.login-sitetitle {
+    margin: 10px auto;
+    width: fit-content;
+    font-family: sitelogin, sans-serif;
+    font-size: 50px;
+    color: var(--red);
+}
+
+.login-sitetitle p {
+    margin: 100px 10px 10px 10px;
+}
+
+.login-logwin {
+    width: 250px;
+    height: fit-content;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 1px;
+    border: var(--bs-gray-500) 1px solid;
+    padding: 20px;
+}
+
+.login-logwin-input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 5px auto;
+}
+
+.login-logwin-input label {
+    font-size: var(--micro);
+    line-height: 2;
+    color: var(--bs-gray-700);
+}
+
+.login-logwin-input input {
+    border: var(--bs-gray-700) 1px solid;
+    border-radius: 5px;
+    font-size: var(--medium);
+    height: 36px;
+    color: var(--bs-gray-700);
+    /*line-height: 2.5;*/
+}
+
+.login-logwin-input input:focus {
+    border: var(--bs-gray-700) 1px solid;
+    border-radius: 5px;
+    font-size: var(--medium);
+}
+
+.login-logwin-input-pwvis {
+    position: relative;
+    top: -28px;
+    left: 220px;
+    width: fit-content;
+}
+
+.login-logwin-chkbox {
+    width: 100%;
+
+    margin: 15px auto;
+}
+
+.login-logwin-chkbox label {
+    font-size: var(--micro);
+    line-height: 2;
+    color: var(--bs-gray-700);
+}
+
+.login-logwin-chkbox input[type=checkbox]:checked::after {
+    color: var(--red);
+}
+
+.login-logwin-chkbox input[type=submit] {
+    padding: 7px 12px;
+    /*background: #0073aa;*/
+    background-color: var(--red);
+    border-radius: 5px;
+    /*border: #0073aa 1px solid;*/
+    border: var(--red) 1px solid;
+    color: white;
+    float: right;
+}
+
+.login-advanced-forget {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 270px;
+    margin: 30px auto;
+    font-size: 13px;
+}
+
+.login-advanced-forget a {
+    font-size: var(--micro);
+    margin-bottom: 10px;
+    color: var(--bs-gray-700);
+}
+
+.login-advanced-forget div select {
+    border: var(--bs-gray-700) 1px solid;
+    border-radius: 5px;
+    width: 170px;
+    padding: 7px 10px;
+}
+
+.login-advanced-forget div i {
+    color: var(--red);
+}
+
+.login-advanced-forget div input {
+    display: none;
+}
+
+.login-advanced-forget div label {
+    padding: 7px 12px;
+    /*background: #0073aa;*/
+    background-color: var(--red);
+    border-radius: 5px;
+    /*border: #0073aa 1px solid;*/
+    border: var(--red) 1px solid;
+    color: white;
+}

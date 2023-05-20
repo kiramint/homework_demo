@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Kira's Site</title>
+    <!--Load script start-->
+    <script src="js/framework.js" type="text/javascript"></script>
+    <link href="css/framework.css" rel="stylesheet" type="text/css">
+    <script src="js/index.js" type="text/javascript"></script>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <!-- font awsome-->
+    <link href="framework/fontawesome/css/fontawesome.css" rel="stylesheet" type="text/css"> <!--只是为了加载Icon，应该可以用吧-->
+    <link href="framework/fontawesome/css/solid.css" rel="stylesheet" type="text/css"> <!--只是为了加载Icon，应该可以用吧-->
+    <link href="framework/fontawesome/css/brands.css" rel="stylesheet" type="text/css"> <!--只是为了加载Icon，应该可以用吧-->
+    <!--Load script stop-->
+</head>
+<body>
+<!--
+Before Everything
+contains: Pop Window
+BAND_TEMP
+-->
+<section>
+    <div class="index-pop-window-background" id="pop-bak" style="display: none"></div>
+    <div class="index-pop-window" id="pop-wnd" style="display: none">
+        <div class="doc-block d-flex justify-center">
+            <div class="index-pop-window-card">
+                <img src="img/404.png" alt="Somethings went wrong!">
+                <div>
+                    <h5>Web 编程基础作业</h5>
+                    <p>
+                        作者：何致远<br>
+                        学号：2225060661<br>
+                        班级：22网2<br>
+                        <br>
+                        点 View Article 看完整 Readme。
+                    </p>
+                    <div class="d-flex">
+                        <a class="button index-pop-window-button-VA" href="404.html">View Article</a>
+                        <div class="nav-button-flex-empty"></div>
+                        <div class="button" onclick="clswind()">Close</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="index-pop-window" id="pop-normal" style="display: none">
+        <div class="doc-block d-flex justify-center">
+            <div class="index-pop-window-card">
+                <img src="img/404.png" alt="Somethings went wrong!">
+                <div>
+                    <h5>Oops!</h5>
+                    <p>If you see these words, there is a problem with the page</p>
+                    <div class="d-flex">
+                        <a class="button index-pop-window-button-VA" href="404.html">View Article</a>
+                        <div class="nav-button-flex-empty"></div>
+                        <div class="button" onclick="clswindnormal()">Close</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--header start-->
+<header>
+    <!--Clock-->
+    <div class="index-header-timer">
+        <div class="doc-block d-flex">
+            <div class="index-header-title-clock d-flex">
+                <div class="fa fa-calendar index-header-title-clock-calendar"></div>
+                <div class="index-header-timer-content"></div>
+            </div>
+            <div class="nav-button-flex-empty"></div>
+            <a class="nav-button" href="login.html">LOGIN</a>
+        </div>
+    </div>
+    <!--Title-->
+    <div class="index-header-title">
+        <div class="doc-block">
+            <div class="index-header-title-content">
+                Kira's Site
+            </div>
+        </div>
+    </div>
+    <!--Nav Bar Start-->
+    <nav class="index-header-navbar">
+        <div class="doc-block">
+            <!--NAV-->
+            <div class="index-header-navbar-btn">
+                <a class="nav-button index-header-navbar-btn-home" href="index.html">HOME</a>
+                <a class="nav-button nav-button-flex-empty"></a>
+                <a class="nav-button index-header-navbar-btn-regular" href="blog.html">BLOG</a>
+                <a class="nav-button index-header-navbar-btn-regular" href="article.html">ARTICLE</a>
+                <a class="nav-button index-header-navbar-btn-regular" href="editor.html">EDITOR</a>
+                <div class="nav-button index-header-navbar-btn-regular" onclick="popwind()">README</div>
+                <!--Search Bar Start-->
+                <div class="index-header-navbar-search">
+                    <form class="d-flex">
+                        <input aria-label="Search" class="form-control me-2 bg-dark border-secondary text-secondary"
+                               placeholder="Search" type="search">
+                        <button class="btn btn-outline-danger" type="submit">Search</button>
+                    </form>
+                </div>
+                <!--Search Bar Stop-->
+            </div>
+        </div>
+    </nav>
+    <!--Nav Bar Stop-->
+</header>
+<!--header stop-->
+<!--
+Before Section
+contains:
+    1.Roll table(marquee):Folded when the page isn't wide enough.
+-->
+<!--Roll Table Start-->
+<section>
+    <div class="doc-block">
+        <div class="index-body-rolltable">
+            <p>
+                <i class="fa fa-spinner fa-spin"></i> &nbsp;Recent Release
+            </p>
+            <div class="index-body-rolltable-content">
+                <!--Lable 'marquee' has been out of date-->
+                <div class="index-body-rolltable-marquee">
+                    <a href="404.html">Lorem ipsum dolor sit amet.</a>
+                    <a href="404.html">Lorem ipsum dolor sit amet.</a>
+                    <a href="404.html">Lorem ipsum dolor sit amet.</a>
+                    <a href="404.html">Lorem ipsum dolor sit amet.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Roll Table Stop-->
+<!--
+First Section
+contains:
+    1.Side List
+    2.Carousel
+-->
+<section>
+    <div class="doc-block index-body-first-section">
+        <div class="d-flex justify-center">
+            <div class="index-body-sidebar-left">
+                <div class="index-body-sidebar-left-title ">
+                    <div>
+                        <p>Tendency</p>
+                    </div>
+                </div>
+                <div class="index-body-sidebar-left-list">
+                    <ul>
+                        <!--The color and numbers below will be generated by php-->
+                        <li onclick="jumpTo404OC()">
+                            <span>此网站搭配XAMPP (Apache+PHP8.2) 更配哦~</span>
+                            &nbsp;&nbsp;
+                            <span class="rounded-pill" style="background-color: var(--bs-secondary)">2</span>
+                            <img src="img/sample.jpg" alt="">
+                        </li>
+                        <li onclick="jumpTo404OC()">
+                            <span>登录处理程序、文章提交处理程序需要PHP。</span>
+                            &nbsp;&nbsp;
+                            <span class="rounded-pill" style="background-color: #0D6EFD">14</span>
+                            <img src="img/pic.jpg" alt="">
+                        </li>
+                        <li onclick="jumpTo404OC()">
+                            <span>Lorem ipsum dolor sit amet.</span>
+                            &nbsp;&nbsp;
+                            <span class="rounded-pill" style="background-color: #FFC107">188</span>
+                            <img src="img/neko.jpg" alt="">
+                        </li>
+                        <li onclick="jumpTo404OC()">
+                            <span>Lorem ipsum dolor sit amet.</span>
+                            &nbsp;&nbsp;
+                            <span class="rounded-pill" style="background-color: var(--red)">999</span>
+                            <img src="img/shit.jpg" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--Carousel start-->
+            <div class="index-body-carousel">
+                <input checked id="control-1" name="control" type="radio">
+                <input id="control-2" name="control" type="radio">
+                <input id="control-3" name="control" type="radio">
+                <div class="index-body-carousel-indicators">
+                    <label for="control-1"></label>
+                    <label for="control-2"></label>
+                    <label for="control-3"></label>
+                </div>
+                <div class="index-body-carousel-indicators-navigator">
+                    <label id="navi-prev" onclick="carousel.prevOc()">
+                        <i class="fa fa-angle-left"></i>
+                    </label>
+                    <label id="navi-next" onclick="carousel.nextOc()">
+                        <i class="fa fa-angle-right"></i>
+                    </label>
+                </div>
+                <div class="index-body-carousel-picture">
+                    <div class="index-body-carousel-picture-item">
+                        <img alt="" onclick="jumpTo404OC()" src="img/carousel/01.png">
+                        <div>
+                            <h5>First Picture</h5>
+                            <p>Kawaii! Kawaii! Kawaii! Kawaii! Kawaii! </p>
+                        </div>
+                    </div>
+                    <div class="index-body-carousel-picture-item">
+                        <img alt="" onclick="jumpTo404OC()" src="img/carousel/02.jpg">
+                        <div>
+                            <h5>Second Picture</h5>
+                            <p>Kawaii! Kawaii! Kawaii! Kawaii! Kawaii! </p>
+                        </div>
+                    </div>
+                    <div class="index-body-carousel-picture-item">
+                        <img alt="" onclick="jumpTo404OC()" src="img/carousel/03.jpg">
+                        <div>
+                            <h5>Third Picture</h5>
+                            <p>Kawaii! Kawaii! Kawaii! Kawaii! Kawaii! </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Carousel stop-->
+        </div>
+    </div>
+</section>
+<!--
+Second Section
+contains:
+    1.Card Article
+-->
+<section>
+    <div class="doc-block">
+        <div class="index-body-second-section">
+            <div class="index-body-card">
+                <img alt="" src="./img/carousel/01.png">
+                <div>
+                    <h5>First Article</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores,
+                        quaerat.</p>
+                    <div class="button" onclick="card1OC()">Have a look</div>
+                </div>
+            </div>
+            <div class="index-body-card">
+                <img alt="" src="./img/carousel/02.jpg">
+                <div>
+                    <h5>Sencond Article</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores,
+                        quaerat.</p>
+                    <div class="button" onclick="card2OC()">Have a look</div>
+                </div>
+            </div>
+            <div class="index-body-card">
+                <img alt="" src="./img/carousel/03.jpg">
+                <div>
+                    <h5>Third Article</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores,
+                        quaerat.</p>
+                    <div class="button" onclick="card3OC()">Have a look</div>
+                </div>
+            </div>
+            <div class="index-body-card">
+                <img alt="" src="./img/sample.jpg">
+                <div>
+                    <h5>Fourth Article</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores,
+                        quaerat.</p>
+                    <div class="button" onclick="card4OC()">Have a look</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--
+Before Third Section
+contains:break
+-->
+<section>
+    <div class="doc-block">
+        <div class="index-body-break"></div>
+    </div>
+</section>
+<!--
+Third Section
+contains:Article list
+-->
+<section>
+    <div class="doc-block">
+        <div class="index-body-third-section">
+            <!--Side list start-->
+            <div class="index-body-artlis">
+                <div class="index-body-artlis-title">
+                    <p>Trending Now</p>
+                </div>
+                <ul>
+                    <li>Lorem ipsum dolor.&nbsp;&nbsp;<span class="fa fa-fire"></span></li>
+                    <li>Lorem ipsum dolor.&nbsp;&nbsp;<span class="fa fa-fire"></span></li>
+                    <li>Lorem ipsum dolor.&nbsp;&nbsp;<span class="fa fa-fire"></span></li>
+                    <li>Lorem ipsum dolor.</li>
+                    <li>Lorem ipsum dolor.</li>
+                    <li>Lorem ipsum dolor.</li>
+                    <li>Lorem ipsum dolor.</li>
+                    <li>Lorem ipsum dolor.</li>
+                    <li>Lorem ipsum dolor.</li>
+                    <li>Lorem ipsum dolor.</li>
+                    <li>Lorem ipsum dolor.</li>
+                </ul>
+            </div>
+            <!--Side list stop-->
+            <!--Article list start-->
+            <div>
+                <div class="index-body-article">
+                    <div class="d-flex justify-center">
+                        <img src="img/carousel/01.png" alt="">
+                    </div>
+                    <div class="index-body-article-content">
+                        <h5>ARTICLE 1</h5>
+                        <p>
+                            此网站搭配XAMPP (Apache+PHP8.2) 更配哦~<br>登录处理程序、文章提交处理程序需要PHP。
+                        </p>
+                        <p>
+                            <small>Last updated 114514.1919810 mins ago</small>
+                        </p>
+
+                        <div class="button" onclick="arti1OC()">Have a look</div>
+                    </div>
+                </div>
+                <div class="index-body-article">
+                    <div class="d-flex justify-center">
+                        <img src="img/article/1.jpg" alt="">
+                    </div>
+                    <div class="index-body-article-content">
+                        <h5>ARTICLE 2</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dignissimos repellat
+                            saepe? Aliquam beatae doloribus error et mollitia nemo qui quibusdam tempora ullam
+                            veniam. Amet ipsa ipsum praesentium quo saepe.
+                        </p>
+                        <p>
+                            <small>Last updated 3 mins ago</small>
+                        </p>
+                        <div class="button" onclick="arti2OC()">Have a look</div>
+                    </div>
+                </div>
+                <div class="index-body-article">
+                    <div class="d-flex justify-center">
+                        <img src="img/article/2.jpg" alt="">
+                    </div>
+                    <div class="index-body-article-content">
+                        <h5>ARTICLE 3</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dignissimos repellat
+                            saepe? Aliquam beatae doloribus error et mollitia nemo qui quibusdam tempora ullam
+                            veniam. Amet ipsa ipsum praesentium quo saepe.
+                        </p>
+                        <p>
+                            <small>Last updated 3 mins ago</small>
+                        </p>
+                        <div class="button" onclick="arti3OC()">Have a look</div>
+                    </div>
+                </div>
+                <div class="index-body-article">
+                    <div class="d-flex justify-center">
+                        <img src="img/article/3.jpg" alt="">
+                    </div>
+                    <div class="index-body-article-content">
+                        <h5>ARTICLE 4</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dignissimos repellat
+                            saepe? Aliquam beatae doloribus error et mollitia nemo qui quibusdam tempora ullam
+                            veniam. Amet ipsa ipsum praesentium quo saepe.
+                        </p>
+                        <p>
+                            <small>Last updated 3 mins ago</small>
+                        </p>
+                        <div class="button" onclick="arti4OC()">Have a look</div>
+                    </div>
+                </div>
+                <div class="index-body-article">
+                    <div class="d-flex justify-center">
+                        <img src="img/article/5.jpg" alt="">
+                    </div>
+                    <div class="index-body-article-content">
+                        <h5>ARTICLE 5</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dignissimos repellat
+                            saepe? Aliquam beatae doloribus error et mollitia nemo qui quibusdam tempora ullam
+                            veniam. Amet ipsa ipsum praesentium quo saepe.
+                        </p>
+                        <p>
+                            <small>Last updated 3 mins ago</small>
+                        </p>
+                        <div class="button" onclick="arti5OC()">Have a look</div>
+                    </div>
+                </div>
+                <div class="index-body-article">
+                    <div class="d-flex justify-center">
+                        <img src="img/article/6.jpg" alt="">
+                    </div>
+                    <div class="index-body-article-content">
+                        <h5>ARTICLE 6</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dignissimos repellat
+                            saepe? Aliquam beatae doloribus error et mollitia nemo qui quibusdam tempora ullam
+                            veniam. Amet ipsa ipsum praesentium quo saepe.
+                        </p>
+                        <p>
+                            <small>Last updated 3 mins ago</small>
+                        </p>
+                        <div class="button" onclick="arti6OC()">Have a look</div>
+                    </div>
+                </div>
+            </div>
+            <!--Article list stop-->
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="index-footer-container doc-block-fluid">
+        <div class="doc-block">
+            <div class="d-flex justify-center">
+                <div class="index-footer-title">
+                    <p class="index-footer-site-title"><a href="index.html">Kira's Site</a></p>
+                    <p class="index-footer-site-subtitle"><a href="https://space.bilibili.com/382279525">Powered by Kira
+                        Mint</a></p>
+                </div>
+                <div>
+                    <p class="index-footer-container-word">
+                        Kira's Site Powered by FontAwesome Framework.
+                        <br>
+                        <small>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam beatae commodi
+                            delectus
+                            dignissimos sit.
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

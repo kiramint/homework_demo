@@ -3,18 +3,12 @@ window.onload = function () {
     displayTime();
     hljs.highlightAll();
 }
-let demoDocument;
+let demoDocument=null;
 function demoDoc(){
-    if(!demoDocument){
-        demoDocument = document.querySelector("#text-area").value;
-    }
     document.querySelector("#text-area").value=demoDocument;
     viewArticle();
 }
 function clearDoc(){
-    if(!demoDocument){
-        demoDocument = document.querySelector("#text-area").value;
-    }
     document.querySelector("#text-area").value="";
     viewArticle();
 }
